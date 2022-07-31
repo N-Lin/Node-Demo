@@ -17,6 +17,7 @@ npm start
 API Paths:
 
 - Find all tasks: 'Get' '/api/items'
+- Find one task by its ID: 'Get' '/api/item/:id'
 - Create a new task: 'Post' '/api/item'
 - Update a task: 'Put' '/api/item'
 - Delete a task: 'Delete' '/api/item/:id'
