@@ -33,3 +33,13 @@ DB="todo"
 DIALECT="postgres"
 PORT="5432"
 ```
+
+Build Docker image
+```sh
+docker build -t n-lin/node-web-demo
+```
+
+Run the image
+```sh
+docker run -p 3050:3050 --network="host" n-lin/node-web-demo
+```
