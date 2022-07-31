@@ -16,6 +16,10 @@ app.get('/api/items', (req, res) => {
     itemController.getItems().then(data => res.json(data));
 });
 
+app.get('/api/item/:id', (req, res) => {
+    itemController.getItemById(req.params.id).then(data => res.json(data));
+});
+
 app.post('/api/item', (req, res) => {
     itemController.createItem(req.body.item).then(data => res.json(data));
 });

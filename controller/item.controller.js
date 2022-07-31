@@ -27,6 +27,16 @@ class ItemController {
         }
     }
 
+    async getItemById(id) {
+        try {
+            const item= await this.db.items.findByPk(id);
+            return item;
+        } catch (err) {
+            console.log("Failed to find tasks: " + err.message);
+            return [];
+        }
+    }
+
     async createItem(item) {
         console.log(item);
         let data = {};
